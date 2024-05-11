@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://o8x42pfjeusv"]
+
+[ext_resource type="Script" path="res://devlogs/BackButton.gd" id="1_wq77v"]
+[ext_resource type="Texture2D" uid="uid://bjd0gxavtu2wn" path="res://assets/devlogs/dev1.png" id="2_4o7cs"]
+
+[node name="Devlog1" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -128.0
+offset_top = -70.0
+offset_right = 1412.0
+offset_bottom = 813.0
+color = Color(0.393086, 0.393086, 0.393085, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -31.0
+offset_top = -31.0
+offset_right = 882.0
+offset_bottom = 774.0
+color = Color(0, 0, 0, 1)
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1192.0
+offset_top = 8.0
+offset_right = 1263.0
+offset_bottom = 39.0
+text = "BACK"
+script = ExtResource("1_wq77v")
+
+[node name="Devlog" type="RichTextLabel" parent="."]
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 846.0
+offset_bottom = 651.0
+bbcode_enabled = true
+text = "Wassup Wassup!
+
+This is the first devlog so I won't talk much,
+if you know me than you will know that I JUST started working on the game by the time your seeing this and that the game is probably going to get cancelled soon.
+
+But let's put that behind us shall we?
+
+Inner Dimension Reach is back!
+And so is most of my ability to have motivation
+
+So yeah I am just working on IDR again, this time in godot for a change! Yes indeed, I am working in godot as I'm hoping you saw in the splash screen for this!
+
+Godot is an epic open source (my precious) game engine that I just decided to try cause I saw that it had it's own language so I was like \"yeah sure why not?\" Also I got \"many\" recommendations for it other than unity, also I'm not doing unity cause it has a bigger learning curve than I thought! Also making new projects in unity takes forever... I mean that seriously. Making games in unity would suck, by the time the project loads the motivation would be gone...
+
+But anyway! Positives! The game will hopefully actually get made, Brackeys is making tasty tutorials for Godot now so uh yeah. That's epic! And it will help! So anyway that's all I got to say.
+
+I'm listening to an awsome playlist right now so I am going to take this musical motivation and MAKE THIS DAMN GAME!"
+fit_content = true
+shortcut_keys_enabled = false
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(1148, 509)
+scale = Vector2(0.428119, 0.428119)
+texture = ExtResource("2_4o7cs")
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
