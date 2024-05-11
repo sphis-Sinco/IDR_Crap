@@ -19,19 +19,23 @@ wrap_controls = false
 unresizable = false
 borderless = false
 
+[node name="Description" type="RichTextLabel" parent="UpdateThing"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 596.0
+offset_bottom = 396.0
+text = "
+test"
+
 [node name="LinkButton" type="LinkButton" parent="UpdateThing"]
-offset_right = 122.0
-offset_bottom = 23.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 596.0
+offset_bottom = 396.0
 tooltip_text = "click me to go to the latest update"
 text = "LATEST UPDATE"
 underline = 1
 uri = "https://github.com/mahikotahi/IDR_Crap/releases"
-
-[node name="Description" type="RichTextLabel" parent="UpdateThing"]
-offset_top = 15.0
-offset_right = 40.0
-offset_bottom = 55.0
-text = "test"
 
 [node name="UpdateListOpener" type="TextureButton" parent="."]
 offset_left = 10.0
