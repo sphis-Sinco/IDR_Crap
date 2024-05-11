@@ -10,16 +10,17 @@ config_version=5
 
 [application]
 
-config/name="IDR-Launcher"
+config/name="IDR Launcher"
 run/main_scene="res://scenes/launcha.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://assets/windowIcons/icon-0004.png"
+config/icon="res://assets/windowIcons/icon-0004.png"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/borderless=true
+window/size/resizable=false
 
 [rendering]
 
