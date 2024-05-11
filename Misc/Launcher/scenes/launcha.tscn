@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clbhgwawp5et8"]
+
+[ext_resource type="Texture2D" uid="uid://b82mqxecihj48" path="res://assets/backgrounds/sketch test.png" id="1_v5mmt"]
+
+[node name="Launcha" type="Node2D"]
+
+[node name="SketchTest" type="Sprite2D" parent="."]
+position = Vector2(845, 343)
+texture = ExtResource("1_v5mmt")
