@@ -7,8 +7,4 @@ func _ready():
 	var textureRNG = str(rng.randi_range(1, 2))
 	texture = load(Global.return_path('assets/creditsmenu/doodles000'+str(textureRNG), 'png'))
 	# res://assets/creditsmenu/doodles0002.png
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	
