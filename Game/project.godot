@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Inner Dimension Reach"
-run/main_scene="res://scenes/startingState.tscn"
+run/main_scene="res://scenes/menus/startingState.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://assets/misc/godotSplash.png"

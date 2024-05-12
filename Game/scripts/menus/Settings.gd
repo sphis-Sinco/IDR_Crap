@@ -19,7 +19,7 @@ var NEW_SCENE = 'scenes/TitleScreen'
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.CURRENT_SCENE = 'Settings Menu'
-	version.text = 'Inner Dimension Reach\nBy Haxen Filp\n'+Global.returnGameVer() + '\n' # set the version text
+	version.text = Global.returnMMGameVer()
 	
 	print(Global.DOUBLE_SPEED)
 	
@@ -38,7 +38,7 @@ func _process(delta):
 
 # when the leave button is pressed
 func _on_leave_pressed():
-	NEW_SCENE = 'scenes/MainMenuState'
+	NEW_SCENE = 'scenes/menus/MainMenuState'
 	start_timer.start()
 
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://xve1e1rbcudv"]
 
-[ext_resource type="Script" path="res://scripts/menus/startingState.gd" id="1_4thvp"]
-[ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="1_otirm"]
+[ext_resource type="Script" path="res://scripts/menus/startingState.gd" id="1_uqwee"]
+[ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="2_t8kkr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jme4h"]
-font = ExtResource("1_otirm")
+font = ExtResource("2_t8kkr")
 font_size = 64
 
 [node name="StartingState" type="Node2D"]
-script = ExtResource("1_4thvp")
+script = ExtResource("1_uqwee")
 
 [node name="Backdrop" type="ColorRect" parent="."]
 offset_left = -32.0

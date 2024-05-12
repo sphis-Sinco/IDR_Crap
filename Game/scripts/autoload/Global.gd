@@ -1,7 +1,7 @@
 extends Node
 
 # game variables
-var GAME_VERSION = '0.0.2'
+var GAME_VERSION = '0.0.3'
 var VERSION_SUFFIX = '[gYbu private version]'
 var CREDITS = ''
 
@@ -22,6 +22,10 @@ var ERROR_MESSAGE = 'Nonexistant'
 # Return the Full Game Version String
 func returnGameVer():
 	return 'v' + GAME_VERSION + ' ' + VERSION_SUFFIX
+	
+# Return the Main Menu Game Version String
+func returnMMGameVer():
+	return 'Inner Dimension Reach\nBy Haxen Filp\n'+returnGameVer() + '\n'
 
 # switch scenes
 func switch_scene(sceneName):

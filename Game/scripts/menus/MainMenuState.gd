@@ -20,7 +20,7 @@ var NEW_SCENE = 'scenes/TitleScreen'
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.CURRENT_SCENE = 'Main Menu'
-	version.text = 'Inner Dimension Reach\nBy Haxen Filp\n'+Global.returnGameVer() + '\n' # set the version text
+	version.text = Global.returnMMGameVer()
 	
 	if Global.BOUNCE_HAXEN:
 		bounce_haxen.visible = true

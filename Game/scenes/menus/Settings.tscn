@@ -21,6 +21,7 @@ visible = false
 [node name="Window" type="Window" parent="." index="7"]
 position = Vector2i(20, 36)
 size = Vector2i(1235, 500)
+borderless = true
 
 [node name="Leave" type="Button" parent="Window" index="0"]
 offset_left = 15.0

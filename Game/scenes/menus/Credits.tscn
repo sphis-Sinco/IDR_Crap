@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://chato41e8jyw1"]
+
+[ext_resource type="PackedScene" uid="uid://bwva4e50pp4xn" path="res://scenes/menus/MainMenuState.tscn" id="1_amhdx"]
+[ext_resource type="Script" path="res://scripts/menus/Credits.gd" id="2_a0gxk"]
+[ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="3_qel5i"]
+[ext_resource type="Texture2D" uid="uid://k5itxwvohmt7" path="res://assets/creditsmenu/doodles0001.png" id="4_kjoho"]
+[ext_resource type="Script" path="res://scripts/menus/CreditDoodle.gd" id="5_nrkvk"]
+[ext_resource type="Texture2D" uid="uid://56ovkidq0ulk" path="res://assets/creditsmenu/doodles0003.png" id="6_gai56"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyr03"]
+font = ExtResource("3_qel5i")
+font_size = 12
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits" instance=ExtResource("1_amhdx")]
+script = ExtResource("2_a0gxk")
+
+[node name="BG" parent="." index="1"]
+color = Color(0.619608, 0.513726, 0.513726, 1)
+
+[node name="Play" parent="." index="3"]
+visible = false
+
+[node name="Settings" parent="." index="4"]
+visible = false
+
+[node name="Credits" parent="." index="5"]
+visible = false
+
+[node name="CreditsPopup" type="Window" parent="." index="8"]
+title = "Credits"
+initial_position = 1
+size = Vector2i(500, 500)
+borderless = true
+
+[node name="Label" type="Label" parent="CreditsPopup" index="0"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -11.5
+offset_right = 84.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Epic credits will exist here"
+label_settings = SubResource("LabelSettings_jyr03")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Leave" type="Button" parent="CreditsPopup" index="1"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 23.0
+offset_bottom = 23.0
+text = "LEAVE MENU"
+
+[node name="credDoodle" type="Sprite2D" parent="." index="9"]
+position = Vector2(260, 328)
+texture = ExtResource("4_kjoho")
+script = ExtResource("5_nrkvk")
+
+[node name="credDoodle2" type="Sprite2D" parent="." index="10"]
+position = Vector2(1027, 328)
+texture = ExtResource("6_gai56")
+flip_h = true
+script = ExtResource("5_nrkvk")
+
+[connection signal="pressed" from="CreditsPopup/Leave" to="." method="_on_leave_pressed"]
