@@ -1,2 +1,2 @@
 Haxen Filp - Animation, Composition, Programming
-Riley - Programming Assistance
+Riley - Programming Assistance, Playtester

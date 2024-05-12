@@ -1,13 +1,20 @@
 extends Node
 
 # game variables
-var GAME_VERSION = '0.0.1'
+var GAME_VERSION = '0.0.2'
 var VERSION_SUFFIX = '[gYbu private version]'
 var CREDITS = ''
+
+# settings
+var DOUBLE_SPEED = false
+var SPEEDRUN_MODE = false
+
+# scenes
 var CURRENT_SCENE = 'Unknown'
+var previous_SCENE = 'Unknown'
 
 # misc variables
-var ERROR_MESSAGE = 'bruh'
+var ERROR_MESSAGE = 'Nonexistant'
 
 # Return the Full Game Version String
 func returnGameVer():
@@ -84,4 +91,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if previous_SCENE != CURRENT_SCENE:
+		previous_SCENE = CURRENT_SCENE
+		print_rich('[color=green]Swapped Scene: '+CURRENT_SCENE+'[/color]')

@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3yucjjstujvb"]
+
+[ext_resource type="PackedScene" uid="uid://bwva4e50pp4xn" path="res://scenes/MainMenuState.tscn" id="1_irkyc"]
+[ext_resource type="Script" path="res://scripts/Settings.gd" id="2_og48x"]
+
+[node name="Settings" instance=ExtResource("1_irkyc")]
+script = ExtResource("2_og48x")
+
+[node name="BG" parent="." index="1"]
+color = Color(0.584314, 0.670588, 0.878431, 1)
+
+[node name="Play" parent="." index="3"]
+visible = false
+
+[node name="Settings" parent="." index="4"]
+visible = false
+
+[node name="Credits" parent="." index="5"]
+visible = false
+
+[node name="Window" type="Window" parent="." index="7"]
+position = Vector2i(20, 70)
+size = Vector2i(1235, 500)
+
+[node name="Leave" type="Button" parent="Window" index="0"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 23.0
+offset_bottom = 23.0
+text = "LEAVE MENU"
+
+[node name="DoubleSpeed" type="CheckBox" parent="Window" index="1"]
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 91.0
+text = "DOUBLE SPEED"
+
+[node name="SpeedrunMode" type="CheckBox" parent="Window" index="2"]
+offset_left = 15.0
+offset_top = 90.0
+offset_right = 179.0
+offset_bottom = 121.0
+text = "SPEEDRUN MODE"
+
+[connection signal="pressed" from="Window/Leave" to="." method="_on_leave_pressed"]
+[connection signal="toggled" from="Window/DoubleSpeed" to="." method="_on_double_speed_toggled"]
+[connection signal="toggled" from="Window/SpeedrunMode" to="." method="_on_speedrun_mode_toggled"]

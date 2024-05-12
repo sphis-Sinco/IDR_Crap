@@ -10,6 +10,7 @@ func _ready():
 	# error text and file
 	err_label.text = 'Whoops! There was an Error in '+Global.CURRENT_SCENE+'!\n\nError: '+Global.ERROR_MESSAGE
 	Global.save_file('errors/error-'+thedate, err_label.text, 'txt')
+	Global.CURRENT_SCENE = 'Error Menu'
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
