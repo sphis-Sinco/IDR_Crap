@@ -31,7 +31,7 @@ func select(scene = NEW_SCENE):
 
 # when the Play node is pressed
 func _on_play_pressed():
-	select()
+	select('scenes/Gameplay')
 
 # when the StartTimer node time ends
 func _on_start_timer_timeout():

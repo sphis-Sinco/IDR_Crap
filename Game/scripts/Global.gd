@@ -2,7 +2,7 @@ extends Node
 
 # game variables
 var GAME_VERSION = '0.0.1'
-var VERSION_SUFFIX = '[gYbu version]'
+var VERSION_SUFFIX = '[gYbu private version]'
 var CREDITS = ''
 var CURRENT_SCENE = 'Unknown'
 
