@@ -6,9 +6,6 @@
 [node name="Settings" instance=ExtResource("1_irkyc")]
 script = ExtResource("2_og48x")
 
-[node name="StartTimer" parent="." index="0"]
-wait_time = 0.2
-
 [node name="BG" parent="." index="1"]
 color = Color(0.584314, 0.670588, 0.878431, 1)
 
