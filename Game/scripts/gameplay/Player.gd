@@ -18,7 +18,7 @@ func _ready():
 		print_rich('[color=cyan]SPEEDRUN MODE![/color]')
 
 func _physics_process(delta):
-	if paused == false:
+	if paused == false and !Global.REACHED_FLAG:
 		var direction = Input.get_axis("left", "right")
 		
 		if direction == 0:
@@ -50,4 +50,14 @@ func _physics_process(delta):
 
 		move_and_slide()
 	else:
-		animated_sprite_2d.pause()
+		if paused:
+			animated_sprite_2d.pause()
+		
+		if Global.REACHED_FLAG:
+			# Add the gravity.
+			if not is_on_floor():
+				velocity.y += gravity * delta
+				move_and_slide()
+			
+			if animated_sprite_2d.animation != 'victory':
+				animated_sprite_2d.play('victory')

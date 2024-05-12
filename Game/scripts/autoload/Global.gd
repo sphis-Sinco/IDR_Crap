@@ -5,6 +5,10 @@ var GAME_VERSION = '0.1.0'
 var VERSION_SUFFIX = '[veLe private]'
 var CREDITS = ''
 
+# gameplay variables
+var REACHED_FLAG = false
+var PAUSED = false
+
 # funny
 var BOUNCE_HAXEN = false
 

@@ -6,6 +6,8 @@ extends Node2D
 @onready var player = $Player
 @onready var color_rect = $ColorRect
 
+@export var NEXT_LEVEL = 'scenes/gameplay/Gameplay'
+
 var seconds = 0
 var minutes = 0
 var hours = 0
@@ -15,6 +17,8 @@ func _ready():
 	color_rect.visible = false
 	
 	Global.CURRENT_SCENE = 'Gameplay State'
+	Global.REACHED_FLAG = false
+	Global.PAUSED = false
 	
 	time.text = "Time: 00:00:00"
 	time.visible = false
@@ -36,22 +40,33 @@ func _process(delta):
 	if (time.position.y > -20):
 		time.position.y = -20
 	
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("pause") && !Global.REACHED_FLAG:
 		player.paused = !player.paused
 		
 		color_rect.visible = false
 		if player.paused:
 			color_rect.visible = true
 		
+		Global.PAUSED = player.paused
+		
 	if player.paused:
 		if Input.is_action_just_pressed('paused_main_menu'):
 			Global.BOUNCE_HAXEN = true
 			Global.switch_scene('scenes/menus/MainMenuState')
+			
+	if Global.REACHED_FLAG:
+		if not minute_timer.time_left > 0:
+			minute_timer.wait_time = 0.5
+			minute_timer.start()
 
 
 func _on_minute_timer_timeout():
 	_timeIncreate()
-	minute_timer.start()
+	
+	if Global.REACHED_FLAG:
+		Global.switch_scene(NEXT_LEVEL)
+	else:
+		minute_timer.start()
 
 func _timeIncreate():
 	seconds += 1

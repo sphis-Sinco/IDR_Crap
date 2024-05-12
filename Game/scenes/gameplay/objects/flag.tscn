@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://usra1d788pg0"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/flag.gd" id="1_fupa5"]
+[ext_resource type="Texture2D" uid="uid://dilt7dtdd68qs" path="res://assets/gameplay/flag.png" id="1_hgoyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62h2u"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pd45"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbo5m"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qaa7"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k3hi"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t60ic"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6qhi"]
+atlas = ExtResource("1_hgoyr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqh4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62h2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pd45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbo5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qaa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3k3hi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t60ic")
+}],
+"loop": false,
+"name": &"collision",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6qhi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmeni"]
+size = Vector2(2, 24)
+
+[node name="Area2D" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, 8)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_fupa5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_pqh4p")
+animation = &"collision"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_xmeni")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

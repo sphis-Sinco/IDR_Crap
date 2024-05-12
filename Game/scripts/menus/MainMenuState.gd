@@ -19,6 +19,7 @@ var NEW_SCENE = 'scenes/TitleScreen'
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.REACHED_FLAG = false
 	Global.CURRENT_SCENE = 'Main Menu'
 	version.text = Global.returnMMGameVer()
 	
