@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://uarbohuj1wle"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_l80e4"]
+[ext_resource type="Script" path="res://scripts/gameplay/Player.gd" id="1_l80e4"]
 [ext_resource type="Texture2D" uid="uid://cixxpvcvrnm3k" path="res://assets/gameplay/haxen.png" id="1_oks4k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysgii"]

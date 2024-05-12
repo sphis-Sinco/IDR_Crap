@@ -5,7 +5,7 @@ func _ready():
 	Global.CURRENT_SCENE = 'Starting Scene'
 	print_rich('[color=purple]Inner Dimension Reach '+Global.returnGameVer()+'[/color]');
 	Global.CREDITS = Global.load_file('assets/dataFiles/credits', 'txt')
-	Global.switch_scene('scenes/MainMenuState')
+	Global.switch_scene('scenes/menus/MainMenuState')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

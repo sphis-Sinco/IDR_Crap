@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bctqmmooyd7hp"
-path="res://.godot/imported/credit-icon.png-3d35546bae970cbacab2cf2cf7001234.ctex"
+uid="uid://diglpen2qcqx4"
+path="res://.godot/imported/icon-0003.png-8cbb3da3fe2896bc2b1868158c1f5d4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mainMenuButtons/credit-icon.png"
-dest_files=["res://.godot/imported/credit-icon.png-3d35546bae970cbacab2cf2cf7001234.ctex"]
+source_file="res://assets/misc/windowIcons/icon-0003.png"
+dest_files=["res://.godot/imported/icon-0003.png-8cbb3da3fe2896bc2b1868158c1f5d4a.ctex"]
 
 [params]
 

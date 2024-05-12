@@ -14,12 +14,12 @@ config/name="Inner Dimension Reach"
 run/main_scene="res://scenes/startingState.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://assets/godotSplash.png"
-config/icon="res://assets/windowIcons/icon-0003.png"
+boot_splash/image="res://assets/misc/godotSplash.png"
+config/icon="res://assets/misc/windowIcons/icon-0003.png"
 
 [autoload]
 
-Global="*res://scripts/Global.gd"
+Global="*res://scripts/autoload/Global.gd"
 
 [display]
 

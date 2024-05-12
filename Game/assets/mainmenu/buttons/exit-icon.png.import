@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vt2ke0ym78bb"
-path="res://.godot/imported/haxenFall.png-c8f8c907fc0b303ecca8ecd3c6e4e7d2.ctex"
+uid="uid://gwn81ex4671h"
+path="res://.godot/imported/exit-icon.png-9a7b970477a59e99317f585bb15e7220.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/haxenFall.png"
-dest_files=["res://.godot/imported/haxenFall.png-c8f8c907fc0b303ecca8ecd3c6e4e7d2.ctex"]
+source_file="res://assets/mainmenu/buttons/exit-icon.png"
+dest_files=["res://.godot/imported/exit-icon.png-9a7b970477a59e99317f585bb15e7220.ctex"]
 
 [params]
 

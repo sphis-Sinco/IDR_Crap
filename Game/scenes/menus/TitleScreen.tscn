@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://sxvl1o0icelt"]
 
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="1_2hb37"]
-[ext_resource type="Script" path="res://scripts/TitleScreen.gd" id="1_5uqod"]
+[ext_resource type="Script" path="res://scripts/menus/TitleScreen.gd" id="1_5uqod"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_njghj"]
 font = ExtResource("1_2hb37")

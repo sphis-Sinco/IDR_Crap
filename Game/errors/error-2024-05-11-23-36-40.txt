@@ -1,3 +1,0 @@
-Whoops! There was an Error in Starting Scene!
-
-Error: Nonexistant

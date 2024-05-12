@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://cfegsca2riiq5"]
 
-[ext_resource type="PackedScene" uid="uid://uarbohuj1wle" path="res://scenes/objects/Player.tscn" id="1_2xl5a"]
-[ext_resource type="Script" path="res://scripts/Gameplay.gd" id="1_dhy1i"]
-[ext_resource type="Texture2D" uid="uid://c5rjqwmmxwqkx" path="res://assets/mainMenuButtons/save-icon.png" id="2_efsdl"]
+[ext_resource type="PackedScene" uid="uid://uarbohuj1wle" path="res://scenes/gameplay/objects/Player.tscn" id="1_2xl5a"]
+[ext_resource type="Script" path="res://scripts/gameplay/Gameplay.gd" id="1_dhy1i"]
+[ext_resource type="Texture2D" uid="uid://c5rjqwmmxwqkx" path="res://assets/mainmenu/buttons/save-icon.png" id="2_efsdl"]
 [ext_resource type="Texture2D" uid="uid://cejs55rbyvtmd" path="res://assets/gameplay/tileset.png" id="3_q11oi"]
-[ext_resource type="PackedScene" uid="uid://b6q1nbd6jwv8k" path="res://scenes/objects/killzone.tscn" id="4_0garh"]
+[ext_resource type="PackedScene" uid="uid://b6q1nbd6jwv8k" path="res://scenes/gameplay/objects/killzone.tscn" id="4_0garh"]
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="5_3rfru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvsmr"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xve1e1rbcudv"]
 
-[ext_resource type="Script" path="res://scripts/startingState.gd" id="1_4thvp"]
+[ext_resource type="Script" path="res://scripts/menus/startingState.gd" id="1_4thvp"]
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="1_otirm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jme4h"]

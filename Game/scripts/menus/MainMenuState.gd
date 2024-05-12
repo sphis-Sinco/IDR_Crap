@@ -38,23 +38,23 @@ func select(scene = NEW_SCENE):
 
 # when the Play node is pressed
 func _on_play_pressed():
-	select('scenes/Gameplay')
+	select('scenes/gameplay/Gameplay')
 	settings.visible = false
 	credits.visible = false
 
 # when the StartTimer node time ends
 func _on_start_timer_timeout():
 	Global.switch_scene(NEW_SCENE)
-	NEW_SCENE = 'scenes/MainMenuState'
+	NEW_SCENE = 'scenes/menus/MainMenuState'
 
 
 func _on_settings_pressed():
-	select('scenes/Settings')
+	select('scenes/menus/Settings')
 	play.visible = false
 	credits.visible = false
 
 
 func _on_credits_pressed():
-	select('scenes/Settings')
+	select('scenes/menus/Credits')
 	play.visible = false
 	settings.visible = false
