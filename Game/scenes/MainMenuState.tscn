@@ -71,7 +71,6 @@ offset_top = 456.0
 offset_right = 620.0
 offset_bottom = 547.0
 scale = Vector2(2, 2)
-disabled = true
 text = "CREDITS"
 icon = ExtResource("5_x6me0")
 
@@ -107,3 +106,4 @@ shape = SubResource("CircleShape2D_xqr2p")
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

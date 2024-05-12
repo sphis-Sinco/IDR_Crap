@@ -52,3 +52,9 @@ func _on_settings_pressed():
 	select('scenes/Settings')
 	play.visible = false
 	credits.visible = false
+
+
+func _on_credits_pressed():
+	select('scenes/Settings')
+	play.visible = false
+	settings.visible = false
