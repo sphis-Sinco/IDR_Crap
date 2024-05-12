@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwva4e50pp4xn"]
+
+[ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="1_3yqsk"]
+[ext_resource type="Script" path="res://scripts/MainMenuState.gd" id="1_yrbif"]
+[ext_resource type="Texture2D" uid="uid://diei73upv4y2v" path="res://assets/mainMenuButtons/play-icon.png" id="3_mxlmj"]
+[ext_resource type="Texture2D" uid="uid://cxjslpv74682j" path="res://assets/mainMenuButtons/settings-icon.png" id="4_m036d"]
+[ext_resource type="Texture2D" uid="uid://bctqmmooyd7hp" path="res://assets/mainMenuButtons/credit-icon.png" id="5_x6me0"]
+[ext_resource type="Texture2D" uid="uid://ddhltfgtkc8mh" path="res://assets/godotSplash.png" id="6_f75j2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1svl4"]
+font = ExtResource("1_3yqsk")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenuState" type="Node2D"]
+script = ExtResource("1_yrbif")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = -15.0
+offset_top = -6.0
+offset_right = 1320.0
+offset_bottom = 735.0
+color = Color(0.513726, 0.458824, 0.858824, 1)
+
+[node name="Version" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 627.0
+offset_right = 1269.0
+offset_bottom = 709.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+label_settings = SubResource("LabelSettings_1svl4")
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="Play" type="Button" parent="."]
+texture_filter = 1
+offset_left = 450.0
+offset_top = 65.0
+offset_right = 620.0
+offset_bottom = 156.0
+scale = Vector2(2, 2)
+text = "PLAY"
+icon = ExtResource("3_mxlmj")
+
+[node name="Settings" type="Button" parent="."]
+texture_filter = 1
+offset_left = 450.0
+offset_top = 261.0
+offset_right = 620.0
+offset_bottom = 352.0
+scale = Vector2(2, 2)
+disabled = true
+text = "SETTINGS"
+icon = ExtResource("4_m036d")
+
+[node name="Credits" type="Button" parent="."]
+texture_filter = 1
+offset_left = 450.0
+offset_top = 456.0
+offset_right = 620.0
+offset_bottom = 547.0
+scale = Vector2(2, 2)
+disabled = true
+text = "CREDITS"
+icon = ExtResource("5_x6me0")
+
+[node name="lilSplash" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(926, 323)
+texture = ExtResource("6_f75j2")

@@ -1,0 +1,3 @@
+- Speedrun Mode - Add Timer to keep track of time until stage clearence
+- 10 Levels - Inceasing in difficulty
+- Cool as hell Settings Menu - Several Easter Eggs
