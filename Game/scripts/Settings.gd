@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var window = $Window
 @onready var check_box = $Window/CheckBox
+
 @onready var double_speed = $Window/DoubleSpeed
 @onready var speedrun_mode = $Window/SpeedrunMode
 
