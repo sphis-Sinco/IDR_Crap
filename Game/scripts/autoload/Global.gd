@@ -1,8 +1,8 @@
 extends Node
 
 # game variables
-var GAME_VERSION = '0.0.3'
-var VERSION_SUFFIX = '[gYbu private version]'
+var GAME_VERSION = '0.1.0'
+var VERSION_SUFFIX = '[veLe private]'
 var CREDITS = ''
 
 # funny
