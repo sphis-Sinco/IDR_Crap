@@ -38,7 +38,7 @@ func select(scene = NEW_SCENE):
 
 # when the Play node is pressed
 func _on_play_pressed():
-	select('scenes/gameplay/Gameplay')
+	select('scenes/gameplay/levels/Level1')
 	settings.visible = false
 	credits.visible = false
 

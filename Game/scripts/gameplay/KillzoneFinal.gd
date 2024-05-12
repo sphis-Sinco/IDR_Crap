@@ -16,12 +16,9 @@ func _on_body_entered(body):
 
 func _on_timer_timeout():
 	Engine.time_scale = 1
-	if Global.DOUBLE_SPEED or Global.SPEEDRUN_MODE:
-		# cool little bouncing haxen filp
-		Global.BOUNCE_HAXEN = true
-		# disable the settings
-		# Global.ResetSettings()
-		# switch scene
-		Global.switch_scene('scenes/menus/MainMenuState')
-	else:
-		get_tree().reload_current_scene()
+	# cool little bouncing haxen filp
+	Global.BOUNCE_HAXEN = true
+	# disable the settings
+	# Global.ResetSettings()
+	# switch scene
+	Global.switch_scene('scenes/menus/MainMenuState')
