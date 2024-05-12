@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwva4e50pp4xn"]
+[gd_scene load_steps=11 format=3 uid="uid://bwva4e50pp4xn"]
 
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="1_3yqsk"]
 [ext_resource type="Script" path="res://scripts/MainMenuState.gd" id="1_yrbif"]
@@ -6,11 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://cxjslpv74682j" path="res://assets/mainMenuButtons/settings-icon.png" id="4_m036d"]
 [ext_resource type="Texture2D" uid="uid://bctqmmooyd7hp" path="res://assets/mainMenuButtons/credit-icon.png" id="5_x6me0"]
 [ext_resource type="Texture2D" uid="uid://ddhltfgtkc8mh" path="res://assets/godotSplash.png" id="6_f75j2"]
+[ext_resource type="Texture2D" uid="uid://vt2ke0ym78bb" path="res://assets/haxenFall.png" id="7_5s31i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1svl4"]
 font = ExtResource("1_3yqsk")
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ecg8i"]
+friction = 41.55
+rough = true
+bounce = 0.37
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqr2p"]
 
 [node name="MainMenuState" type="Node2D"]
 script = ExtResource("1_yrbif")
@@ -71,6 +79,30 @@ icon = ExtResource("5_x6me0")
 visible = false
 position = Vector2(926, 323)
 texture = ExtResource("6_f75j2")
+
+[node name="BounceHaxen" type="RigidBody2D" parent="."]
+visible = false
+position = Vector2(619, 96)
+rotation = -1.14319
+collision_layer = 2
+collision_mask = 2
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_ecg8i")
+gravity_scale = 1.305
+linear_velocity = Vector2(1000, 0)
+angular_velocity = 10.472
+constant_torque = 0.385
+
+[node name="Sprite2D" type="Sprite2D" parent="BounceHaxen"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("7_5s31i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BounceHaxen"]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_xqr2p")
 
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -9,6 +9,8 @@ extends Node2D
 
 @onready var start_timer = $StartTimer
 
+@onready var bounce_haxen = $BounceHaxen
+
 # regular variables
 
 var NEW_SCENE = 'scenes/TitleScreen'
@@ -19,6 +21,10 @@ var NEW_SCENE = 'scenes/TitleScreen'
 func _ready():
 	Global.CURRENT_SCENE = 'Main Menu'
 	version.text = 'Inner Dimension Reach\nBy Haxen Filp\n'+Global.returnGameVer() + '\n' # set the version text
+	
+	if Global.BOUNCE_HAXEN:
+		bounce_haxen.visible = true
+		Global.BOUNCE_HAXEN = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

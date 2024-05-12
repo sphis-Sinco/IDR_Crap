@@ -20,6 +20,15 @@ var NEW_SCENE = 'scenes/TitleScreen'
 func _ready():
 	Global.CURRENT_SCENE = 'Settings Menu'
 	version.text = 'Inner Dimension Reach\nBy Haxen Filp\n'+Global.returnGameVer() + '\n' # set the version text
+	
+	print(Global.DOUBLE_SPEED)
+	
+	if Global.DOUBLE_SPEED == true:
+		double_speed.set_pressed(true)
+	if Global.SPEEDRUN_MODE == true:
+		speedrun_mode.set_pressed(true)
+	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,6 +1,10 @@
 extends Area2D
 
 @onready var timer = $Timer
+@onready var player = $"../Player"
+
+func _process(delta):
+	position.x = player.position.x
 
 func _on_body_entered(body):
 	print_rich('[color=red]Wasted![/color]')
@@ -12,4 +16,12 @@ func _on_body_entered(body):
 
 func _on_timer_timeout():
 	Engine.time_scale = 1
-	get_tree().reload_current_scene()
+	if Global.DOUBLE_SPEED or Global.SPEEDRUN_MODE:
+		# cool little bouncing haxen filp
+		Global.BOUNCE_HAXEN = true
+		# disable the settings
+		# Global.ResetSettings()
+		# switch scene
+		Global.switch_scene('scenes/MainMenuState')
+	else:
+		get_tree().reload_current_scene()

@@ -5,6 +5,9 @@ var GAME_VERSION = '0.0.2'
 var VERSION_SUFFIX = '[gYbu private version]'
 var CREDITS = ''
 
+# funny
+var BOUNCE_HAXEN = false
+
 # settings
 var DOUBLE_SPEED = false
 var SPEEDRUN_MODE = false
@@ -94,3 +97,7 @@ func _process(delta):
 	if previous_SCENE != CURRENT_SCENE:
 		previous_SCENE = CURRENT_SCENE
 		print_rich('[color=green]Swapped Scene: '+CURRENT_SCENE+'[/color]')
+
+func ResetSettings():
+	DOUBLE_SPEED = false
+	SPEEDRUN_MODE = false
