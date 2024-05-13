@@ -5,6 +5,7 @@ var GAME_VERSION = '0.1.0'
 var CURRENT_VERSION = 'x.x.x'
 var VERSION_SUFFIX = '[veLe private]'
 var CREDITS = ''
+var CHANGELOGS = ''
 
 # gameplay variables
 var REACHED_FLAG = false

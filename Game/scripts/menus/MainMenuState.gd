@@ -60,3 +60,7 @@ func _on_credits_pressed():
 	select('scenes/menus/Credits')
 	play.visible = false
 	settings.visible = false
+
+
+func _on_video_timer_timeout():
+	select('scenes/menus/Credits')

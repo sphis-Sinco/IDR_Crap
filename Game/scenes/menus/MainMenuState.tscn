@@ -27,6 +27,10 @@ script = ExtResource("1_166s4")
 wait_time = 0.2
 one_shot = true
 
+[node name="VideoTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
 [node name="BG" type="ColorRect" parent="."]
 offset_left = -15.0
 offset_top = -6.0
@@ -104,6 +108,7 @@ scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_xqr2p")
 
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="VideoTimer" to="." method="_on_video_timer_timeout"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
