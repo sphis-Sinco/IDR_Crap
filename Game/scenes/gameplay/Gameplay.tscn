@@ -226,7 +226,8 @@ offset_right = 220.0
 offset_bottom = 67.5
 grow_vertical = 2
 text = "Press Z to go to Main Menu
-Press X to go to Settings Menu"
+Press X to go to Settings Menu
+Press C to reset"
 label_settings = SubResource("LabelSettings_2wybd")
 vertical_alignment = 1
 
