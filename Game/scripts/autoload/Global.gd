@@ -2,12 +2,15 @@ extends Node
 
 # game variables
 var GAME_VERSION = '0.1.0'
+var CURRENT_VERSION = 'x.x.x'
 var VERSION_SUFFIX = '[veLe private]'
 var CREDITS = ''
 
 # gameplay variables
 var REACHED_FLAG = false
 var PAUSED = false
+var GAMEPLAY_SETTINGS = false
+var GAMEPLAY_SCENE = 'false'
 
 # funny
 var BOUNCE_HAXEN = false
@@ -101,10 +104,10 @@ func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if previous_SCENE != CURRENT_SCENE:
 		previous_SCENE = CURRENT_SCENE
-		print_rich('[color=green]Swapped Scene: '+CURRENT_SCENE+'[/color]')
+		print_rich('[color=DARK_ORCHID]Swapped Scene: '+CURRENT_SCENE+'[/color]')
 
 func ResetSettings():
 	DOUBLE_SPEED = false

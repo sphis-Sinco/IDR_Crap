@@ -13,9 +13,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	if Global.DOUBLE_SPEED:
 		multiplier = 2
-		print_rich('[color=cyan]DOUBLE SPEED MODE![/color]')
+		print_rich('[color=KHAKI]DOUBLE SPEED MODE![/color]')
 	if Global.SPEEDRUN_MODE:
-		print_rich('[color=cyan]SPEEDRUN MODE![/color]')
+		print_rich('[color=KHAKI]SPEEDRUN MODE![/color]')
 
 func _physics_process(delta):
 	if paused == false and !Global.REACHED_FLAG:

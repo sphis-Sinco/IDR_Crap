@@ -4,7 +4,6 @@ extends Node2D
 @onready var version = $Version
 
 @onready var window = $Window
-@onready var check_box = $Window/CheckBox
 
 @onready var double_speed = $Window/DoubleSpeed
 @onready var speedrun_mode = $Window/SpeedrunMode
@@ -21,7 +20,7 @@ func _ready():
 	Global.CURRENT_SCENE = 'Settings Menu'
 	version.text = Global.returnMMGameVer()
 	
-	print(Global.DOUBLE_SPEED)
+	# print(Global.DOUBLE_SPEED)
 	
 	if Global.DOUBLE_SPEED == true:
 		double_speed.set_pressed(true)
@@ -32,13 +31,16 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if window.visible == false:
 		window.visible = true
 
 # when the leave button is pressed
 func _on_leave_pressed():
 	NEW_SCENE = 'scenes/menus/MainMenuState'
+	
+	if Global.GAMEPLAY_SETTINGS:
+		NEW_SCENE = Global.GAMEPLAY_SCENE
 	start_timer.start()
 
 

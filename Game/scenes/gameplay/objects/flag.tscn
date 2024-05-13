@@ -68,7 +68,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xmeni"]
 size = Vector2(2, 24)
 
-[node name="Area2D" type="Area2D"]
+[node name="Flag" type="Area2D"]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(0, 8)
