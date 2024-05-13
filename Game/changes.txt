@@ -6,3 +6,4 @@ Inner Dimension Reach v0.2.0 [veLe private]
 - Menus
 	- Added Reset Settings option to Settings menu
 	- Added Freeplay Menu
+	- Fixed the screen you are sent too when you press enter in the error scene

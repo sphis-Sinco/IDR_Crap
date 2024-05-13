@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlvjln87khief"]
+[gd_scene load_steps=3 format=3 uid="uid://dlvjln87khief"]
 
 [ext_resource type="PackedScene" uid="uid://bwva4e50pp4xn" path="res://scenes/menus/MainMenuState.tscn" id="1_01qs6"]
+[ext_resource type="Script" path="res://scripts/menus/submenus/Freeplay.gd" id="2_wo3ah"]
 
 [node name="Freeplay" instance=ExtResource("1_01qs6")]
+script = ExtResource("2_wo3ah")
 
 [node name="Play" parent="." index="4"]
 visible = false
@@ -15,3 +17,12 @@ visible = false
 
 [node name="Credits" parent="." index="7"]
 visible = false
+
+[node name="Leave" type="Button" parent="." index="10"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 23.0
+offset_bottom = 23.0
+text = "LEAVE MENU"
+
+[connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

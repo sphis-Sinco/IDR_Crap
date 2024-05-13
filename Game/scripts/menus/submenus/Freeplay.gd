@@ -1,11 +1,24 @@
 extends Node2D
 
+# Leaving timer
+@onready var start_timer = $StartTimer
+# Version label
+@onready var version = $Version
 
-# Called when the node enters the scene tree for the first time.
+# The next Scene to go too
+var NEW_SCENE = 'scenes/TitleScreen'
+
+# Basic Setup
 func _ready():
-	pass # Replace with function body.
+	version.text = Global.returnMMGameVer()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+# Just in case
+func _process(_delta):
 	pass
+
+func _on_leave_pressed():
+	NEW_SCENE = 'scenes/menus/MainMenuState'
+	start_timer.start()
+
+func _on_start_timer_timeout():
+	Global.switch_scene(NEW_SCENE)

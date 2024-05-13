@@ -68,7 +68,7 @@ func _process(_delta):
 			Global.switch_scene('scenes/menus/MainMenuState')
 			
 		if Input.is_action_just_pressed('paused_settings'):
-			Global.switch_scene('scenes/menus/Settings')
+			Global.switch_scene('scenes/menus/submenus/Settings')
 			
 		if Input.is_action_just_pressed('paused_reset'):
 			get_tree().reload_current_scene()

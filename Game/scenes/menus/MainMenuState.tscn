@@ -51,40 +51,40 @@ autowrap_mode = 3
 
 [node name="Play" type="Button" parent="."]
 texture_filter = 1
-offset_left = 66.0
-offset_top = 261.0
-offset_right = 236.0
-offset_bottom = 352.0
+offset_left = 90.0
+offset_top = 237.0
+offset_right = 260.0
+offset_bottom = 328.0
 scale = Vector2(2, 2)
 text = "PLAY"
 icon = ExtResource("3_vjjwk")
 
 [node name="Freeplay" type="Button" parent="."]
 texture_filter = 1
-offset_left = 67.0
-offset_top = 456.0
-offset_right = 237.0
-offset_bottom = 547.0
+offset_left = 91.0
+offset_top = 432.0
+offset_right = 261.0
+offset_bottom = 523.0
 scale = Vector2(2, 2)
 text = "FREEPLAY"
 icon = ExtResource("4_5netc")
 
 [node name="Settings" type="Button" parent="."]
 texture_filter = 1
-offset_left = 914.0
-offset_top = 261.0
-offset_right = 1084.0
-offset_bottom = 352.0
+offset_left = 826.0
+offset_top = 229.0
+offset_right = 996.0
+offset_bottom = 320.0
 scale = Vector2(2, 2)
 text = "SETTINGS"
 icon = ExtResource("4_5j4cb")
 
 [node name="Credits" type="Button" parent="."]
 texture_filter = 1
-offset_left = 914.0
-offset_top = 456.0
-offset_right = 1084.0
-offset_bottom = 547.0
+offset_left = 826.0
+offset_top = 424.0
+offset_right = 996.0
+offset_bottom = 515.0
 scale = Vector2(2, 2)
 text = "CREDITS"
 icon = ExtResource("5_e5tra")
