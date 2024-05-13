@@ -2,7 +2,7 @@ extends Node
 
 # Version and Credit variables
 var GAME_VERSION = '0.1.0'
-var VERSION_SUFFIX = '[veLe public]'
+var VERSION_SUFFIX = '[veLe private playtest build]'
 var CREDITS = ''
 
 # Ingame Variables
