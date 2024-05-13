@@ -63,4 +63,5 @@ func _on_credits_pressed():
 
 
 func _on_video_timer_timeout():
-	select('scenes/menus/Credits')
+	#select('scenes/menus/Credits')
+	pass

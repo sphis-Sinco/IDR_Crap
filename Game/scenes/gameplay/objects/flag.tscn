@@ -54,7 +54,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"collision",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -81,6 +81,8 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_pqh4p")
 animation = &"collision"
 autoplay = "idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
