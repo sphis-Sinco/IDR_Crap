@@ -1,30 +1,28 @@
 extends Node
 
-# game variables
+# Version and Credit variables
 var GAME_VERSION = '0.1.0'
-var CURRENT_VERSION = 'x.x.x'
 var VERSION_SUFFIX = '[veLe public]'
 var CREDITS = ''
-var CHANGELOGS = ''
 
-# gameplay variables
+# Ingame Variables
 var REACHED_FLAG = false
 var PAUSED = false
 var GAMEPLAY_SETTINGS = false
 var GAMEPLAY_SCENE = 'false'
 
-# funny
+# Main Menu Gameplay Haxen
 var BOUNCE_HAXEN = false
 
-# settings
+# Setting variables
 var DOUBLE_SPEED = false
 var SPEEDRUN_MODE = false
 
-# scenes
+# Scene Variables
 var CURRENT_SCENE = 'Unknown'
 var previous_SCENE = 'Unknown'
 
-# misc variables
+# Error Variables
 var ERROR_MESSAGE = 'Nonexistant'
 
 # Return the Full Game Version String
@@ -56,6 +54,7 @@ func giveError(errMsg):
 	ERROR_MESSAGE= errMsg
 	switch_scene("scenes/Error")
 
+# Return a file location path
 func return_path(path, extension = 'tscn'):
 	# check for 'res://' and '.tscn'
 	var hasLocation = false
@@ -82,12 +81,13 @@ func return_path(path, extension = 'tscn'):
 	
 	print_rich('[color=blue]'+returnPath+'[/color]')
 	return returnPath
-	
 
+# Save a File 
 func save_file(path, content, extension):
 	var file = FileAccess.open(return_path(path, extension), FileAccess.WRITE)
 	file.store_string(content)
 
+# Load a File
 func load_file(path, extension):
 	var file = FileAccess.open(return_path(path, extension), FileAccess.READ)
 	var content = file.get_as_text()
@@ -100,16 +100,14 @@ func load_file(path, extension):
 	
 	return content
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	# Compare both of the Scene variables
 	if previous_SCENE != CURRENT_SCENE:
 		previous_SCENE = CURRENT_SCENE
+		# Print a Message into the Output letting the developer know the scene Switched
 		print_rich('[color=DARK_ORCHID]Swapped Scene: '+CURRENT_SCENE+'[/color]')
 
+# Resett the Settings
 func ResetSettings():
 	DOUBLE_SPEED = false
 	SPEEDRUN_MODE = false

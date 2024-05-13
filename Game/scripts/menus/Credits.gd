@@ -1,27 +1,29 @@
 extends Node2D
 
-# node variablesS
+# Version Label
 @onready var version = $Version
+
+# Credits Label
 @onready var label = $CreditsPopup/Label
+
+# Timer
 @onready var start_timer = $StartTimer
-# regular variables
+
+# Next Scene
 var NEW_SCENE = 'scenes/TitleScreen'
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	# Basic Setup
 	version.text = Global.returnMMGameVer()
-	label.text = Global.load_file('assets/dataFiles/credits', 'txt')
+	
+	# Load the credits
+	label.text = Global.CREDITS
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
+# Leave button pressed
 func _on_leave_pressed():
 	NEW_SCENE = 'scenes/menus/MainMenuState'
 	start_timer.start()
 
-
+# Timer finished
 func _on_start_timer_timeout():
 	Global.switch_scene(NEW_SCENE)

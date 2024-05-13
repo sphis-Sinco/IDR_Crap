@@ -6,16 +6,16 @@
 [node name="Settings" instance=ExtResource("1_irkyc")]
 script = ExtResource("2_og48x")
 
-[node name="BG" parent="." index="1"]
+[node name="BG" parent="." index="2"]
 color = Color(0.584314, 0.670588, 0.878431, 1)
 
-[node name="Play" parent="." index="3"]
+[node name="Play" parent="." index="4"]
 visible = false
 
-[node name="Settings" parent="." index="4"]
+[node name="Settings" parent="." index="5"]
 visible = false
 
-[node name="Credits" parent="." index="5"]
+[node name="Credits" parent="." index="6"]
 visible = false
 
 [node name="Window" type="Window" parent="." index="7"]
@@ -43,22 +43,6 @@ offset_top = 90.0
 offset_right = 179.0
 offset_bottom = 121.0
 text = "SPEEDRUN MODE"
-
-[node name="MenuButton" type="MenuButton" parent="Window" index="3"]
-visible = false
-offset_left = 15.0
-offset_top = 120.0
-offset_right = 81.0
-offset_bottom = 151.0
-text = "Character"
-alignment = 0
-item_count = 2
-popup/item_0/text = "Haxen Filp"
-popup/item_0/checkable = 1
-popup/item_0/checked = true
-popup/item_0/id = 0
-popup/item_1/text = "TJ"
-popup/item_1/id = 1
 
 [connection signal="pressed" from="Window/Leave" to="." method="_on_leave_pressed"]
 [connection signal="toggled" from="Window/DoubleSpeed" to="." method="_on_double_speed_toggled"]

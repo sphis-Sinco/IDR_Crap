@@ -1,19 +1,14 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	# Set the current scene
 	Global.CURRENT_SCENE = 'Starting Scene'
 	
+	# Print out the game version to the console
 	print_rich('[color=purple]Inner Dimension Reach '+Global.returnGameVer()+'[/color]');
 	
+	# Set some global variables
 	Global.CREDITS = Global.load_file('assets/dataFiles/credits', 'txt')
-	Global.CURRENT_VERSION = Global.load_file('assets/dataFiles/version', 'txt')
-	Global.CHANGELOGS = Global.load_file('assets/dataFiles/changelog', 'txt')
-	# if Global.CURRENT_VERSION != Global.GAME_VERSION:
 	
+	# Switch to Main Menu
 	Global.switch_scene('scenes/menus/MainMenuState')
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass

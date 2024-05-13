@@ -1,41 +1,32 @@
 extends Node2D
 
-# node variables
+# Version Label
 @onready var version = $Version
 
+# Setting Nodes
 @onready var window = $Window
 
 @onready var double_speed = $Window/DoubleSpeed
 @onready var speedrun_mode = $Window/SpeedrunMode
 
+# Timer
 @onready var start_timer = $StartTimer
 
-# regular variables
+# The next Scene to go too
 var NEW_SCENE = 'scenes/TitleScreen'
 
-# function
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	# Basic Setup
 	Global.CURRENT_SCENE = 'Settings Menu'
 	version.text = Global.returnMMGameVer()
 	
-	# print(Global.DOUBLE_SPEED)
-	
+	# Setting Toggles
 	if Global.DOUBLE_SPEED == true:
 		double_speed.set_pressed(true)
 	if Global.SPEEDRUN_MODE == true:
 		speedrun_mode.set_pressed(true)
-	
 
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if window.visible == false:
-		window.visible = true
-
-# when the leave button is pressed
+# When you decide to leave the menu
 func _on_leave_pressed():
 	NEW_SCENE = 'scenes/menus/MainMenuState'
 	
@@ -43,15 +34,14 @@ func _on_leave_pressed():
 		NEW_SCENE = Global.GAMEPLAY_SCENE
 	start_timer.start()
 
-
-# when the timer ends: switch scene
+# When the leaving timer is completed
 func _on_start_timer_timeout():
 	Global.switch_scene(NEW_SCENE)
 
+# Setting Functions
 
 func _on_double_speed_toggled(toggled_on):
 	Global.DOUBLE_SPEED = toggled_on
-
 
 func _on_speedrun_mode_toggled(toggled_on):
 	Global.SPEEDRUN_MODE = toggled_on

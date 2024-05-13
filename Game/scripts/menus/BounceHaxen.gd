@@ -1,11 +1,15 @@
 extends Sprite2D
 
+# Sprite
 @onready var bounce_haxen = $"."
+
+# Collision
 @onready var collision_shape_2d = $CollisionShape2D
 
+# vertical speed
 var ySpeed = 60
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Move depending on the speed variables
 func _process(delta):
 	position.y += ySpeed * delta
 	ySpeed += 1 * delta
