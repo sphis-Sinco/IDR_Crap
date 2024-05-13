@@ -7,6 +7,7 @@ extends Node2D
 @onready var play = $Play
 @onready var settings = $Settings
 @onready var credits = $Credits
+@onready var freeplay = $Freeplay
 
 # Timer
 @onready var start_timer = $StartTimer
@@ -43,14 +44,23 @@ func _on_start_timer_timeout():
 func _on_play_pressed():
 	select('scenes/gameplay/levels/Level1')
 	settings.visible = false
+	freeplay.visible = false
 	credits.visible = false
 
 func _on_settings_pressed():
 	select('scenes/menus/Settings')
 	play.visible = false
+	freeplay.visible = false
 	credits.visible = false
 
 func _on_credits_pressed():
 	select('scenes/menus/Credits')
+	freeplay.visible = false
 	play.visible = false
 	settings.visible = false
+
+func _on_freeplay_pressed():
+	select('scenes/gameplay/levels/Level1')
+	settings.visible = false
+	play.visible = false
+	credits.visible = false

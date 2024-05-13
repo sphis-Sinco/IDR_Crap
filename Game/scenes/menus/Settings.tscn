@@ -12,10 +12,10 @@ color = Color(0.584314, 0.670588, 0.878431, 1)
 [node name="Play" parent="." index="4"]
 visible = false
 
-[node name="Settings" parent="." index="5"]
+[node name="Freeplay" parent="." index="5"]
 visible = false
 
-[node name="Credits" parent="." index="6"]
+[node name="Settings" parent="." index="6"]
 visible = false
 
 [node name="Window" type="Window" parent="." index="7"]
@@ -44,6 +44,17 @@ offset_right = 179.0
 offset_bottom = 121.0
 text = "SPEEDRUN MODE"
 
+[node name="ResetSettings" type="Button" parent="Window" index="3"]
+offset_left = 150.0
+offset_top = 15.0
+offset_right = 267.0
+offset_bottom = 46.0
+text = "Reset Settings"
+
+[node name="Credits" parent="." index="8"]
+visible = false
+
 [connection signal="pressed" from="Window/Leave" to="." method="_on_leave_pressed"]
 [connection signal="toggled" from="Window/DoubleSpeed" to="." method="_on_double_speed_toggled"]
 [connection signal="toggled" from="Window/SpeedrunMode" to="." method="_on_speedrun_mode_toggled"]
+[connection signal="pressed" from="Window/ResetSettings" to="." method="_on_reset_settings_pressed"]

@@ -16,16 +16,19 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Credits" instance=ExtResource("1_amhdx")]
 script = ExtResource("2_a0gxk")
 
-[node name="BG" parent="." index="1"]
+[node name="BG" parent="." index="2"]
 color = Color(0.619608, 0.513726, 0.513726, 1)
 
-[node name="Play" parent="." index="3"]
+[node name="Play" parent="." index="4"]
 visible = false
 
-[node name="Settings" parent="." index="4"]
+[node name="Freeplay" parent="." index="5"]
 visible = false
 
-[node name="Credits" parent="." index="5"]
+[node name="Settings" parent="." index="6"]
+visible = false
+
+[node name="Credits" parent="." index="7"]
 visible = false
 
 [node name="CreditsPopup" type="Window" parent="." index="8"]

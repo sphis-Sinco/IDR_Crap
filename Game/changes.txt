@@ -1,0 +1,8 @@
+Inner Dimension Reach v0.2.0 [veLe private]
+- Gameplay
+	- Added Level 2
+	- Added Level 3
+	- Added Level 4
+- Menus
+	- Added Reset Settings option to Settings menu
+	- Added Freeplay Menu
