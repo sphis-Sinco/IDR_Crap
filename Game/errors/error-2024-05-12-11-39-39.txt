@@ -1,3 +1,0 @@
-Whoops! There was an Error in Settings Menu!
-
-Error: Missing file: res://scenes/MainMenuState.tscn
