@@ -48,19 +48,19 @@ func _on_play_pressed():
 	credits.visible = false
 
 func _on_settings_pressed():
-	select('scenes/menus/Settings')
+	select('scenes/menus/submenus/Settings')
 	play.visible = false
 	freeplay.visible = false
 	credits.visible = false
 
 func _on_credits_pressed():
-	select('scenes/menus/Credits')
+	select('scenes/menus/submenus/Credits')
 	freeplay.visible = false
 	play.visible = false
 	settings.visible = false
 
 func _on_freeplay_pressed():
-	select('scenes/gameplay/levels/Level1')
+	select('scenes/menus/submenus/Freeplay')
 	settings.visible = false
 	play.visible = false
 	credits.visible = false

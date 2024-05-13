@@ -61,10 +61,10 @@ icon = ExtResource("3_vjjwk")
 
 [node name="Freeplay" type="Button" parent="."]
 texture_filter = 1
-offset_left = 69.0
-offset_top = 453.0
-offset_right = 239.0
-offset_bottom = 544.0
+offset_left = 67.0
+offset_top = 456.0
+offset_right = 237.0
+offset_bottom = 547.0
 scale = Vector2(2, 2)
 text = "FREEPLAY"
 icon = ExtResource("4_5netc")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://chato41e8jyw1"]
 
 [ext_resource type="PackedScene" uid="uid://bwva4e50pp4xn" path="res://scenes/menus/MainMenuState.tscn" id="1_amhdx"]
-[ext_resource type="Script" path="res://scripts/menus/Credits.gd" id="2_a0gxk"]
+[ext_resource type="Script" path="res://scripts/menus/submenus/Credits.gd" id="2_a0gxk"]
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="3_qel5i"]
 [ext_resource type="Texture2D" uid="uid://k5itxwvohmt7" path="res://assets/creditsmenu/doodles0001.png" id="4_kjoho"]
-[ext_resource type="Script" path="res://scripts/menus/CreditDoodle.gd" id="5_nrkvk"]
+[ext_resource type="Script" path="res://scripts/menus/objects/CreditDoodle.gd" id="5_nrkvk"]
 [ext_resource type="Texture2D" uid="uid://56ovkidq0ulk" path="res://assets/creditsmenu/doodles0003.png" id="6_gai56"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jyr03"]
