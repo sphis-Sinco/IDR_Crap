@@ -1,10 +1,6 @@
-Inner Dimension Reach v0.2.0 [veLe private]
-- Gameplay
-	- Added Level 2
-	- Added Level 3
-	- Added Level 4
+Inner Dimension Reach
+v0.1.0 (PROTOTYPE)
 - Menus
 	- Added Reset Settings option to Settings menu
-	- Added Freeplay Menu
 	- Fixed the screen you are sent too when you press enter in the error scene
 	- Redone Main Menu

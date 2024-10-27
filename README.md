@@ -7,5 +7,4 @@ This is the github repo for all things Inner Dimension Reach, wanna check out th
 
 # IDR Crap - Links
 - [IDR Devlogs](https://haxen-filp.itch.io/idr-devlogs)
-- [IDR Game (gYbu private version)](https://github.com/mahikotahi/IDR_Crap/releases)
-- [IDR Launcher (Scrapped)](https://github.com/mahikotahi/IDR_Crap/tree/main/Misc/Launcher)
+- [IDR Game (PROTOTYPE)](https://github.com/IdealistCat/IDR_Crap/releases)
