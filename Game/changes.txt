@@ -1,4 +1,7 @@
 Inner Dimension Reach
+v0.1.1 (PROTOTYPE)
+- Gameplay
+	- Added Level 2
 v0.1.0 (PROTOTYPE)
 - Menus
 	- Added Reset Settings option to Settings menu

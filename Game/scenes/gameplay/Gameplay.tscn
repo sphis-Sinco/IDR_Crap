@@ -231,5 +231,4 @@ Press C to reset"
 label_settings = SubResource("LabelSettings_2wybd")
 vertical_alignment = 1
 
-[connection signal="area_entered" from="TileMap/Flag" to="TileMap/Flag" method="_on_area_entered"]
 [connection signal="timeout" from="MinuteTimer" to="." method="_on_minute_timer_timeout"]

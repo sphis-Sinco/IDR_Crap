@@ -1,7 +1,7 @@
 extends Node
 
 # Version and Credit variables
-var GAME_VERSION = '0.1.0'
+var GAME_VERSION = '0.1.1'
 var VERSION_SUFFIX = '(PROTOTYPE)'
 var CREDITS = ''
 
@@ -107,7 +107,7 @@ func _process(_delta):
 		# Print a Message into the Output letting the developer know the scene Switched
 		print_rich('[color=DARK_ORCHID]Swapped Scene: '+CURRENT_SCENE+'[/color]')
 
-# Resett the Settings
+# Reset the Settings
 func ResetSettings():
 	DOUBLE_SPEED = false
 	SPEEDRUN_MODE = false

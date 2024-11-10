@@ -13,7 +13,6 @@ extends Node2D
 
 # Scene Variables
 @export var NEXT_LEVEL = 'Gameplay'
-@export var GAMEPLAY_SCENE = 'Gameplay'
 
 # Time
 var seconds = 0
@@ -58,7 +57,7 @@ func _process(_delta):
 			Global.GAMEPLAY_SETTINGS = true
 			color_rect.visible = true
 		
-		Global.GAMEPLAY_SCENE = 'scenes/gameplay/' + GAMEPLAY_SCENE
+		Global.GAMEPLAY_SCENE = 'scenes/gameplay/' + NEXT_LEVEL
 		Global.PAUSED = player.paused
 	
 	# Pause Menu Buttons
@@ -83,7 +82,7 @@ func _on_minute_timer_timeout():
 	_timeIncreate()
 	
 	if Global.REACHED_FLAG:
-		if NEXT_LEVEL == GAMEPLAY_SCENE:
+		if NEXT_LEVEL == "MainMenu":
 			Global.BOUNCE_HAXEN = true
 			Global.switch_scene('scenes/menus/MainMenuState')
 		else:
