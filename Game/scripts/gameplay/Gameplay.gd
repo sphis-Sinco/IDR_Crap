@@ -2,11 +2,13 @@ extends Node2D
 
 # Timers
 @onready var minute_timer = $MinuteTimer
-@onready var time = $Time
+@onready var time = $TimeText
+@onready var pan_down_timer = $PanDownTimer
 
 # Player and Camera
 @onready var player = $Player
-@onready var camera_2d = $Player/Camera2D
+@onready var camera_manager = $Player/camera_manager
+@onready var camera_2d = $Player/camera_manager/Camera2D
 
 # Paused Background
 @onready var color_rect = $ColorRect
@@ -49,6 +51,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("pause") && !Global.REACHED_FLAG:
 		player.paused = !player.paused
 		minute_timer.paused = player.paused # Pause the timer (speedrun timer)
+		pan_down_timer.paused = player.paused
 		
 		# Paused Setup and Execution
 		color_rect.visible = false
@@ -73,7 +76,17 @@ func _process(_delta):
 			
 		if Input.is_action_just_pressed('paused_reset'):
 			get_tree().reload_current_scene()
-			
+	
+	if Input.is_action_pressed('down'):
+		if !player.paused:
+			movecamdown()
+	elif not Input.is_action_just_pressed("down"):
+		if camera_manager.position != Vector2(0,0):
+			if camera_manager.position >= Vector2(0,0):
+				camera_manager.position -= Vector2(0, cam_manager_move_float)
+			else:
+				camera_manager.position += Vector2(0, cam_manager_move_float)
+	
 	if Global.REACHED_FLAG:
 		if not minute_timer.time_left > 0:
 			minute_timer.wait_time = 0.5
@@ -128,3 +141,9 @@ func _timeIncreate():
 		time.text += '0' + str(seconds)
 	else:
 		time.text += str(seconds)
+
+var cam_manager_move_float = 0.5
+
+func movecamdown():
+	if camera_manager.position == Vector2(0,0) or camera_manager.position <= Vector2(0,10):
+		camera_manager.position += Vector2(0, cam_manager_move_float)

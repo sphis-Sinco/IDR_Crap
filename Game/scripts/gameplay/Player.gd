@@ -25,6 +25,9 @@ func _ready():
 func _physics_process(delta):
 	# Check if paused, check if you have reached the flag
 	if paused == false and !Global.REACHED_FLAG:
+		if Input.is_action_pressed("down"):
+			animated_sprite_2d.play('down')
+			
 		var direction = Input.get_axis("left", "right") # get input
 		
 		# Play movement animation or idle animation

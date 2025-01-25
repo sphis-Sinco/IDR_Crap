@@ -8,6 +8,7 @@ Now running on Godot 4.3
 	- New Tile: Construction
 	- Level 1 has the construction tile at the start and end
 	- Adjusted Player Movement Speed and Jump Velocity
+	- Added Camera panning down (press down)
 - Random
 	- Changed version Syntax
 	- Removed Prototype Suffix
