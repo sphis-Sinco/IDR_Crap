@@ -25,5 +25,3 @@ layer_0/tile_data = PackedInt32Array(917501, 1, 1, 917502, 1, 1, 917503, 1, 1, 8
 
 [node name="Camera2D" parent="Player" index="3"]
 script = SubResource("GDScript_enwu4")
-
-[connection signal="area_entered" from="TileMap/Flag" to="TileMap/Flag" method="_on_area_entered"]

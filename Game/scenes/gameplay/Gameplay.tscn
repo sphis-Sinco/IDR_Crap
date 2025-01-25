@@ -66,6 +66,8 @@ texture = ExtResource("3_q11oi")
 5:0/0 = 0
 6:0/0 = 0
 7:0/0 = 0
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4g7db"]
 resource_name = "Flag"
@@ -173,4 +175,5 @@ Press C to reset"
 label_settings = SubResource("LabelSettings_2wybd")
 vertical_alignment = 1
 
+[connection signal="area_entered" from="TileMap/Flag" to="TileMap/Flag" method="_on_area_entered"]
 [connection signal="timeout" from="MinuteTimer" to="." method="_on_minute_timer_timeout"]
