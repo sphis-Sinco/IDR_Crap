@@ -1,10 +1,15 @@
 Inner Dimension Reach
-v0.1.1 (PROTOTYPE)
+1.25.25 (PROTOTYPE)
 - Gameplay
 	- Added Level 2
 	- Setting the next Level is easier now
+	- New Tile: Construction
+	- Level 1 has the construction tile at the start and end
+- Random
+	- Changed version Syntax
+	- Haxen Filp => Sphis_Sinco in Main Menu
 
-v0.1.0 (PROTOTYPE)
+v0.1.0/10.26.24 (PROTOTYPE)
 - Menus
 	- Added Reset Settings option to Settings menu
 	- Fixed the screen you are sent too when you press enter in the error scene

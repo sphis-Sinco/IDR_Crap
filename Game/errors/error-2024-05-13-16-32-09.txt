@@ -1,3 +1,0 @@
-Whoops! There was an Error in Gameplay State!
-
-Error: Missing file: res://scenes/menus/submenu/Settings.tscn
