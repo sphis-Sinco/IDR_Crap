@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://usra1d788pg0" path="res://scenes/gameplay/objects/flag.tscn" id="4_wcp5y"]
 [ext_resource type="FontFile" uid="uid://qcuf1msymh56" path="res://assets/fonts/dogicapixel.otf" id="5_3rfru"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvsmr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srxe2"]
 texture = ExtResource("2_efsdl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -41,7 +41,7 @@ texture = ExtResource("2_efsdl")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lodr5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02pb6"]
 texture = ExtResource("3_q11oi")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -69,15 +69,15 @@ texture = ExtResource("3_q11oi")
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4g7db"]
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_vx3fj"]
 resource_name = "Flag"
 scenes/1/scene = ExtResource("4_wcp5y")
 
 [sub_resource type="TileSet" id="TileSet_5mbs1"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_uvsmr")
-sources/1 = SubResource("TileSetAtlasSource_lodr5")
-sources/3 = SubResource("TileSetScenesCollectionSource_4g7db")
+sources/0 = SubResource("TileSetAtlasSource_srxe2")
+sources/1 = SubResource("TileSetAtlasSource_02pb6")
+sources/3 = SubResource("TileSetScenesCollectionSource_vx3fj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uim8"]
 size = Vector2(507, 61)
