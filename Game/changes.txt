@@ -1,5 +1,6 @@
 Inner Dimension Reach
 2025.1.25 (PROTOTYPE)
+Now running on Godot 4.3
 - Gameplay
 	- Added Level 2
 	- Setting the next Level is easier now
