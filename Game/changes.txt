@@ -1,17 +1,20 @@
 Inner Dimension Reach
-1.25.25 (PROTOTYPE)
+2025.1.25 (PROTOTYPE)
 - Gameplay
 	- Added Level 2
 	- Setting the next Level is easier now
 	- New Tile: Construction
 	- Level 1 has the construction tile at the start and end
 	- Adjusted Player Movement Speed and Jump Velocity
-	- Modified Main Menu State Haxen Bounce Settings (bounc)
 - Random
 	- Changed version Syntax
-	- Haxen Filp => Sphis_Sinco in Main Menu
+	- Removed Prototype Suffix
+- Menus
+	- Modified Main Menu State Haxen Bounce Settings
+	- Haxen Filp => Sphis_Sinco
+	- Modified Main Menu Version Text
 
-v0.1.0/10.26.24 (PROTOTYPE)
+v0.1.0/2024.10.26 (PROTOTYPE)
 - Menus
 	- Added Reset Settings option to Settings menu
 	- Fixed the screen you are sent too when you press enter in the error scene
