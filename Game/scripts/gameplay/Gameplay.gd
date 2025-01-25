@@ -12,7 +12,8 @@ extends Node2D
 @onready var color_rect = $ColorRect
 
 # Scene Variables
-@export var NEXT_LEVEL = 'Gameplay'
+@export var CURRENT_LEVEL = 'Gameplay'
+@export var NEXT_LEVEL = 'Level1'
 
 # Time
 var seconds = 0
@@ -67,6 +68,7 @@ func _process(_delta):
 			Global.switch_scene('scenes/menus/MainMenuState')
 			
 		if Input.is_action_just_pressed('paused_settings'):
+			Global.GAMEPLAY_SCENE = 'scenes/gameplay/' + CURRENT_LEVEL
 			Global.switch_scene('scenes/menus/submenus/Settings')
 			
 		if Input.is_action_just_pressed('paused_reset'):
@@ -86,7 +88,12 @@ func _on_minute_timer_timeout():
 			Global.BOUNCE_HAXEN = true
 			Global.switch_scene('scenes/menus/MainMenuState')
 		else:
-			Global.switch_scene('scenes/gameplay/' + NEXT_LEVEL)
+			if Global.load_file('scenes/gameplay/' + NEXT_LEVEL, 'tscn') != '<null>':
+				Global.switch_scene('scenes/gameplay/' + NEXT_LEVEL)
+			else:
+				Global.BOUNCE_HAXEN = true
+				Global.switch_scene('scenes/menus/MainMenuState')
+				
 	else:
 		minute_timer.start()
 

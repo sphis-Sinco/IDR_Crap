@@ -3,6 +3,7 @@ Inner Dimension Reach
 - Gameplay
 	- Added Level 2
 	- Setting the next Level is easier now
+		- Added error catching for this system
 	- New Tile: Construction
 	- Level 1 has the construction tile at the start and end
 	- Adjusted Player Movement Speed and Jump Velocity

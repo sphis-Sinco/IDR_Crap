@@ -90,7 +90,11 @@ func save_file(path, content, extension):
 # Load a File
 func load_file(path, extension):
 	var file = FileAccess.open(return_path(path, extension), FileAccess.READ)
-	var content = file.get_as_text()
+	var content = ""
+	if not file == null:
+		content = file.get_as_text()
+	else:
+		content = null
 	
 	# check for null file content
 	if content == null:
