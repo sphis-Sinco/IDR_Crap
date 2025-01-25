@@ -5,6 +5,8 @@ Inner Dimension Reach
 	- Setting the next Level is easier now
 	- New Tile: Construction
 	- Level 1 has the construction tile at the start and end
+	- Adjusted Player Movement Speed and Jump Velocity
+	- Modified Main Menu State Haxen Bounce Settings (bounc)
 - Random
 	- Changed version Syntax
 	- Haxen Filp => Sphis_Sinco in Main Menu

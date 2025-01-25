@@ -97,14 +97,14 @@ texture = ExtResource("6_bdqqk")
 
 [node name="BounceHaxen" type="RigidBody2D" parent="."]
 visible = false
-position = Vector2(263, 336)
+position = Vector2(150, 246)
 rotation = -1.14319
 collision_layer = 2
 collision_mask = 2
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_ecg8i")
 gravity_scale = 1.305
-linear_velocity = Vector2(1000, 0)
+linear_velocity = Vector2(500, -500)
 angular_velocity = 10.472
 constant_torque = 0.385
 

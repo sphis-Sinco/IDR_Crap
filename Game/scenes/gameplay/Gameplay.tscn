@@ -106,7 +106,7 @@ layer_0/tile_data = PackedInt32Array(917501, 327681, 268435457, 917502, 65537, 1
 
 [node name="Player" parent="." instance=ExtResource("1_2xl5a")]
 position = Vector2(-26, 18)
-SPEED = 130.0
+SPEED = 200.0
 JUMP_VELOCITY = -250.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -175,5 +175,4 @@ Press C to reset"
 label_settings = SubResource("LabelSettings_2wybd")
 vertical_alignment = 1
 
-[connection signal="area_entered" from="TileMap/Flag" to="TileMap/Flag" method="_on_area_entered"]
 [connection signal="timeout" from="MinuteTimer" to="." method="_on_minute_timer_timeout"]
